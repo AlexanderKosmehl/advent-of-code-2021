@@ -5,7 +5,7 @@ import { resolve } from 'path'
   Helper Functions
 */
 
-function getNumberOfIncrements(measurements: number[]) {
+function getNumberOfIncrements(measurements: number[]): number {
   let increments = 0
   let lastMeasurement: number | undefined = undefined
 
