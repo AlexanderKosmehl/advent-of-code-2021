@@ -64,7 +64,7 @@ formattedInput.forEach((line) => {
   submarine.moveSimple(line)
 })
 
-submarine.printSolution
+submarine.printSolution()
 
 // Second Task
 submarine = new Submarine()
