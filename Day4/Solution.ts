@@ -25,7 +25,6 @@ const bingoBoards = bingoBoardEntryArrays.map(
   (entryArray) => new BingoBoard(entryArray)
 )
 
-
 // Part 1
 let hasVictor = false
 
@@ -56,7 +55,7 @@ for (const board of bingoBoards) {
 
   for (const number of generatedNumbers) {
     board.call(number)
-    
+
     if (!board.checkForWin()) continue
     else boardHasWon = true
 
@@ -71,4 +70,8 @@ for (const board of bingoBoards) {
   }
 }
 
-console.log('Part 2 Solution: %d (Index: %d)', currentWorstScore, currentWorstIndex)
+console.log(
+  'Part 2 Solution: %d (Index: %d)',
+  currentWorstScore,
+  currentWorstIndex
+)
