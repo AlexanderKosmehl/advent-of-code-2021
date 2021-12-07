@@ -50,12 +50,15 @@ for (let currentPos = 0; currentPos <= crabMax; currentPos++) {
 
 console.log('Minimum Fuel Cost (Part 2):', fuelMinimum)
 
-// Pseudo-"Einzeiler"
+// Pseudo-"Einzeiler" #Denzi
 console.log(
   'Part 1 Alternativ:',
   Math.min(
     ...Array.from(new Array(crabMax).keys()).map((currentPos) =>
-      crabPositions
+      readFileSync(resolve(__dirname, 'Input.txt'))
+        .toString()
+        .split(',')
+        .map((value) => Number(value))
         .map((crabPosition) => Math.abs(currentPos - crabPosition))
         .reduce((prev, curr) => prev + curr, 0)
     )
